@@ -79,6 +79,7 @@ mongoexport \
   --type=csv \
   --fields=params.attachment,response.annotations \
   --sort='{"params.attachment": 1}'
-```
 
-> TODO: Clean up the CSV file and check it in.
+sed -E -i '' "s/params\.attachment,response\.annotations/set,participant,file,left,top,width,height/" bounding-boxes.csv
+sed -E -i '' "s/^https:\/\/storage.googleapis.com\/$BUCKET_NAME\/(.+)\/(.+)\/(.+),\"\[{.+\"\"top\"\":(.+),\"\"left\"\":(.+),\"\"label\"\":\"\"face\"\",\"\"height\"\":(.+),\"\"width\"\":(.+)}\]\"$/\1,\2,\3,\5,\4,\7,\6/" bounding-boxes.csv
+```
