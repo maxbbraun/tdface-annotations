@@ -89,6 +89,7 @@ mongoexport \
 
 sed -E -i '' "s/params\.attachment,response\.annotations/Set,Participant,File,Left,Top,Width,Height/" $CSV_FILE
 sed -E -i '' "s/^https:\/\/storage.googleapis.com\/$BUCKET_NAME\/(.+)\/(.+)\/(.+),\"\[{.+\"\"top\"\":(.+),\"\"left\"\":(.+),\"\"label\"\":\"\"face\"\",\"\"height\"\":(.+),\"\"width\"\":(.+)}\]\"$/\1,\2,\3,\5,\4,\7,\6/" $CSV_FILE
+sort -t, -k 2 -n $CSV_FILE -o $CSV_FILE
 ```
 
 #### 7. Clean up
