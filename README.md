@@ -2,17 +2,17 @@
 
 Ground truth annotations for the [Tufts Face Database](https://github.com/kpvisionlab/Tufts-Face-Database).
 
-| Modality | Annotations |
-| --- | --- |
-| [TD_3D](http://tdface.ece.tufts.edu/downloads/TD_3D/) | N/A |
-| [TD_CS](http://tdface.ece.tufts.edu/downloads/TD_CS/) | N/A |
-| [TD_IR_A](http://tdface.ece.tufts.edu/downloads/TD_IR_A/) | [bounding-boxes.csv](bounding-boxes.csv) |
-| [TD_IR_E](http://tdface.ece.tufts.edu/downloads/TD_IR_E/) | [bounding-boxes.csv](bounding-boxes.csv) |
-| [TD_LYT_A](http://tdface.ece.tufts.edu/downloads/TD_LYT_A/) | N/A |
-| [TD_NIR_A](http://tdface.ece.tufts.edu/downloads/TD_NIR_A/) | N/A |
-| [TD_RGB_A](http://tdface.ece.tufts.edu/downloads/TD_RGB_A/) | N/A |
-| [TD_RGB_E](http://tdface.ece.tufts.edu/downloads/TD_RGB_E/) | N/A |
-| [TD_VIDEO](http://tdface.ece.tufts.edu/downloads/TD_VIDEO.zip) | N/A |
+| Modality | Annotations | Previews |
+| --- | --- | --- |
+| [TD_3D](http://tdface.ece.tufts.edu/downloads/TD_3D/) | N/A | N/A |
+| [TD_CS](http://tdface.ece.tufts.edu/downloads/TD_CS/) | N/A | N/A |
+| [TD_IR_A](http://tdface.ece.tufts.edu/downloads/TD_IR_A/) | [bounding-boxes.csv](bounding-boxes.csv) | [annotated images](previews) |
+| [TD_IR_E](http://tdface.ece.tufts.edu/downloads/TD_IR_E/) | [bounding-boxes.csv](bounding-boxes.csv) | [annotated images](previews) |
+| [TD_LYT_A](http://tdface.ece.tufts.edu/downloads/TD_LYT_A/) | N/A | N/A |
+| [TD_NIR_A](http://tdface.ece.tufts.edu/downloads/TD_NIR_A/) | N/A | N/A |
+| [TD_RGB_A](http://tdface.ece.tufts.edu/downloads/TD_RGB_A/) | N/A | N/A |
+| [TD_RGB_E](http://tdface.ece.tufts.edu/downloads/TD_RGB_E/) | N/A | N/A |
+| [TD_VIDEO](http://tdface.ece.tufts.edu/downloads/TD_VIDEO.zip) | N/A | N/A |
 
 ## Method
 
@@ -92,7 +92,17 @@ sed -E -i '' "s/^https:\/\/storage.googleapis.com\/$BUCKET_NAME\/(.+)\/(.+)\/(.+
 sort -t, -k 2 -n $CSV_FILE -o $CSV_FILE
 ```
 
-#### 7. Clean up
+#### 7. Create previews
+```bash
+PREVIEWS_DIR=previews
+
+python3 -m venv venv && . venv/bin/activate
+pip install opencv-python absl-py
+
+python make_previews.py --tdface_dir=$BUCKET_NAME --bounding_boxes=$CSV_FILE --previews_dir=$PREVIEWS_DIR
+```
+
+#### 8. Clean up
 ```bash
 rm TD_*.zip
 rm -rf $BUCKET_NAME
