@@ -42,8 +42,8 @@ def main(_):
 
                 image_path = os.path.join(root, filename)
                 image = cv2.imread(image_path)
-                image = cv2.rectangle(image, top_left, bottom_right,
-                                      LINE_COLOR, LINE_WIDTH)
+                cv2.rectangle(image, top_left, bottom_right, LINE_COLOR,
+                              LINE_WIDTH)
 
                 save_dir = os.path.join(FLAGS.previews_dir, set_dir,
                                         participant)
