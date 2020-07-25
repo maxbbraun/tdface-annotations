@@ -2,21 +2,21 @@
 
 Ground truth annotations for the [Tufts Face Database](https://github.com/kpvisionlab/Tufts-Face-Database).
 
-| Modality | Annotations | Previews |
-| --- | --- | --- |
-| [TD_3D](http://tdface.ece.tufts.edu/downloads/TD_3D/) | N/A | N/A |
-| [TD_CS](http://tdface.ece.tufts.edu/downloads/TD_CS/) | N/A | N/A |
-| [TD_IR_A](http://tdface.ece.tufts.edu/downloads/TD_IR_A/) | [bounding-boxes.csv](bounding-boxes.csv) | [annotated images](previews) |
-| [TD_IR_E](http://tdface.ece.tufts.edu/downloads/TD_IR_E/) | [bounding-boxes.csv](bounding-boxes.csv) | [annotated images](previews) |
-| [TD_LYT_A](http://tdface.ece.tufts.edu/downloads/TD_LYT_A/) | N/A | N/A |
-| [TD_NIR_A](http://tdface.ece.tufts.edu/downloads/TD_NIR_A/) | N/A | N/A |
-| [TD_RGB_A](http://tdface.ece.tufts.edu/downloads/TD_RGB_A/) | N/A | N/A |
-| [TD_RGB_E](http://tdface.ece.tufts.edu/downloads/TD_RGB_E/) | N/A | N/A |
-| [TD_VIDEO](http://tdface.ece.tufts.edu/downloads/TD_VIDEO.zip) | N/A | N/A |
+| Modality | Annotations |
+| - | - |
+| [TD_3D](http://tdface.ece.tufts.edu/downloads/TD_3D/) | N/A |
+| [TD_CS](http://tdface.ece.tufts.edu/downloads/TD_CS/) | N/A |
+| [TD_IR_A](http://tdface.ece.tufts.edu/downloads/TD_IR_A/) | [bounding-boxes.csv](https://github.com/maxbbraun/tdface-annotations/releases/latest/download/bounding-boxes.csv) |
+| [TD_IR_E](http://tdface.ece.tufts.edu/downloads/TD_IR_E/) | [bounding-boxes.csv](https://github.com/maxbbraun/tdface-annotations/releases/latest/download/bounding-boxes.csv) |
+| [TD_LYT_A](http://tdface.ece.tufts.edu/downloads/TD_LYT_A/) | N/A |
+| [TD_NIR_A](http://tdface.ece.tufts.edu/downloads/TD_NIR_A/) | N/A |
+| [TD_RGB_A](http://tdface.ece.tufts.edu/downloads/TD_RGB_A/) | N/A |
+| [TD_RGB_E](http://tdface.ece.tufts.edu/downloads/TD_RGB_E/) | N/A |
+| [TD_VIDEO](http://tdface.ece.tufts.edu/downloads/TD_VIDEO.zip) | N/A |
 
 ## License
 
-Only the annotation data ([bounding-boxes.csv](bounding-boxes.csv)) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
+Only the annotation data ([bounding-boxes.csv](https://github.com/maxbbraun/tdface-annotations/releases/latest/download/bounding-boxes.csv)) is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/) license.
 
 The original terms and conditions of the [Tufts Face Database](http://tdface.ece.tufts.edu/) apply to the images:
 
